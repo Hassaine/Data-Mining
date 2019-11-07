@@ -5,11 +5,15 @@
  */
 package data.mining;
 
+import dataManipulation.ManipData;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import weka.core.converters.ConverterUtils.DataSource;
+import weka.core.Instances;
+import weka.core.Attribute;
 
 /**
  *
@@ -30,8 +34,21 @@ public class DataMining extends Application {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        launch(args);
+    public static void main(String[] args) throws Exception {
+         //launch(args);
+         
+          DataSource source = new DataSource("data/HEART_Stat.arff");
+        Instances instances = source.getDataSet();
+        // Make the last attribute be the class
+        instances.setClassIndex(instances.numAttributes() - 1);
+
+        // Print header and instances.
+        System.out.println("\nDataset:\n");
+        //System.out.println(instances);
+       // System.out.println(instances.attribute(0));
+        ManipData.display_All_Attributes(instances);
+
+       
     }
     
 }
