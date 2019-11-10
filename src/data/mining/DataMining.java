@@ -6,22 +6,24 @@
 package data.mining;
 
 import dataManipulation.ManipData;
-import javafx.application.Application;
+import java.util.EnumSet;
+/*import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.stage.Stage;
+import javafx.stage.Stage;*/
 import weka.core.converters.ConverterUtils.DataSource;
 import weka.core.Instances;
 import weka.core.Attribute;
+import java.util.Enumeration;
 
 /**
  *
  * @author Hassaine
  */
-public class DataMining extends Application {
+public class DataMining /*extends Application*/ {
     
-    @Override
+    /*@Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         
@@ -29,25 +31,22 @@ public class DataMining extends Application {
         
         stage.setScene(scene);
         stage.show();
-    }
+    }*/
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Exception {
          //launch(args);
-         
-          DataSource source = new DataSource("data/HEART_Stat.arff");
+        //Initialisation of instances 
+        DataSource source = new DataSource("data/HEART_Stat.arff");
         Instances instances = source.getDataSet();
-        // Make the last attribute be the class
-        instances.setClassIndex(instances.numAttributes() - 1);
-
-        // Print header and instances.
-        System.out.println("\nDataset:\n");
-        //System.out.println(instances);
-       // System.out.println(instances.attribute(0));
+        
+        
         ManipData.display_All_Attributes(instances);
-
+        System.out.println("\n****\n");
+        ManipData.display_Data_Set("data/HEART_Stat.arff");
+        System.out.println("Le nombre d'instances est : "+ManipData.Number_Instances(instances));
        
     }
     
