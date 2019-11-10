@@ -50,6 +50,7 @@ public class DataMining /*extends Application*/ {
         
         System.out.println(instances.meanOrMode(7));
         ManipData.calculate_Median(instances, "maximum_heart_rate_achieved");
+        System.out.println((((double)5)/((double)2)));
        
     }
     
