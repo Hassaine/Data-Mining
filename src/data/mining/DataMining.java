@@ -47,6 +47,9 @@ public class DataMining /*extends Application*/ {
         System.out.println("\n****\n");
         ManipData.display_Data_Set("data/HEART_Stat.arff");
         System.out.println("Le nombre d'instances est : "+ManipData.Number_Instances(instances));
+        
+        System.out.println(instances.meanOrMode(7));
+        ManipData.calculate_Median(instances, "maximum_heart_rate_achieved");
        
     }
     

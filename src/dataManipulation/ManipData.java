@@ -1,6 +1,8 @@
 package dataManipulation;
+import java.util.*;
 import weka.core.converters.ConverterUtils.DataSource;
 import weka.core.Instances;
+import weka.core.Instance;
 import weka.core.Attribute;
 /**
  *
@@ -35,7 +37,29 @@ public class ManipData {
         return instances.numInstances();
     }   
     
-    
+    public static void calculate_Median(Instances instances,String attribut){
+        
+        Instance current_instance;
+        int Nb_Ins = Number_Instances(instances);
+        int index = (Nb_Ins / 2);
+        ArrayList<Integer> listOf_Values = new ArrayList<Integer>();
+        
+        for(int i=0;i<Nb_Ins;i++){
+            current_instance = instances.get(i);
+            listOf_Values.add((int)(current_instance.value(instances.attribute(attribut))));
+            
+        }
+        Collections.sort(listOf_Values);
+        if ( Nb_Ins%2 == 0 ){
+            //Pair
+            System.out.println((listOf_Values.get(index)+listOf_Values.get(index-1))/2);
+            System.out.println(listOf_Values.get(index));
+            System.out.println(listOf_Values.get(index-1));
+        }
+        else{
+        }
+        System.out.println(listOf_Values);
+    }
     
     
 }
