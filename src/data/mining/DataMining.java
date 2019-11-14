@@ -5,7 +5,10 @@
  */
 package data.mining;
 
+import dataManipulation.DataSet;
+import dataManipulation.ManipCentralTend;
 import dataManipulation.ManipData;
+import dataManipulation.MeasAttribut;
 import java.util.EnumSet;
 /*import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -15,7 +18,7 @@ import javafx.stage.Stage;*/
 import weka.core.converters.ConverterUtils.DataSource;
 import weka.core.Instances;
 import weka.core.Attribute;
-import java.util.Enumeration;
+import java.util.*;
 
 /**
  *
@@ -37,21 +40,21 @@ public class DataMining /*extends Application*/ {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Exception {
-         //launch(args);
-        //Initialisation of instances 
-        DataSource source = new DataSource("data/HEART_Stat.arff");
-        Instances instances = source.getDataSet();
+         
+        //Initialising data set
+        DataSet data = new DataSet("data/HEART_Stat.arff");
+        Instances instances = data.getInstances();
+        //Initialising attributs in this data set 
+        MeasAttribut attribut = new MeasAttribut(instances);
         
-        
-        ManipData.display_All_Attributes(instances);
-        System.out.println("\n****\n");
-        ManipData.display_Data_Set("data/HEART_Stat.arff");
-        System.out.println("Le nombre d'instances est : "+ManipData.Number_Instances(instances));
-        
-        System.out.println(instances.meanOrMode(7));
-        ManipData.calculate_Median(instances, "maximum_heart_rate_achieved");
-        System.out.println((((double)5)/((double)2)));
-       
+        ArrayList<Integer> list = attribut.calculate_Effectif("maximum_heart_rate_achieved");
+        double Q3 = attribut.calculate_Quartile3("maximum_heart_rate_achieved",list);
+        System.out.println("Le Q3 est : "+Q3);
+        double mediane = attribut.calculate_Median("maximum_heart_rate_achieved");
+        System.out.println("The median is: "+mediane);
+        System.out.println("THe mean is :"+attribut.calculate_Mean("maximum_heart_rate_achieved"));
+        int i = attribut.calculate_Mode("maximum_heart_rate_achieved");
+        System.out.println(instances);
     }
     
 }
