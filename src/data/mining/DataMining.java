@@ -47,14 +47,20 @@ public class DataMining /*extends Application*/ {
         //Initialising attributs in this data set 
         MeasAttribut attribut = new MeasAttribut(instances);
         
-        ArrayList<Integer> list = attribut.calculate_Effectif("maximum_heart_rate_achieved");
+        /*ArrayList<Integer> list = attribut.calculate_Effectif("maximum_heart_rate_achieved");
         double Q3 = attribut.calculate_Quartile3("maximum_heart_rate_achieved",list);
         System.out.println("Le Q3 est : "+Q3);
+        double Q1 = attribut.calculate_Quartile1("maximum_heart_rate_achieved",list);
+        System.out.println("Le Q1 est : "+Q1);
         double mediane = attribut.calculate_Median("maximum_heart_rate_achieved");
         System.out.println("The median is: "+mediane);
         System.out.println("THe mean is :"+attribut.calculate_Mean("maximum_heart_rate_achieved"));
         int i = attribut.calculate_Mode("maximum_heart_rate_achieved");
-        System.out.println(instances);
+        System.out.println(instances);*/
+        
+        //data.display_All_Attributes();
+        //data.display_Default_DS();
+        data.display_Default_Att();
     }
     
 }
