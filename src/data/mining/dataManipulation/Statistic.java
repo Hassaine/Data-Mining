@@ -1,5 +1,6 @@
-package dataManipulation;
+package data.mining.dataManipulation;
 import java.util.*;
+import javafx.scene.control.TextArea;
 import weka.core.converters.ConverterUtils.DataSource;
 import weka.core.Instances;
 import weka.core.Instance;
@@ -8,12 +9,13 @@ import weka.core.Attribute;
  *
  * @author hads
  */
-public class MeasAttribut {
+public class Statistic {
     
+
     private Instances instances;
-    private double Mean,Mediane,Mode,Q1,Q3,Range;
+   
     
-    public MeasAttribut(Instances instances){
+    public Statistic(Instances instances){
         this.instances = instances;
     
     }
@@ -40,7 +42,7 @@ public class MeasAttribut {
 
     }
     
-    public static ArrayList<Integer> countFrequencies(ArrayList<Integer> list) 
+    protected static ArrayList<Integer> countFrequencies(ArrayList<Integer> list) 
     { 
             int somme=0,count=0;
             int val1 = list.get(0);
@@ -61,12 +63,12 @@ public class MeasAttribut {
                 somme = somme + count;
                 freq_list.add(val1);
                 freq_list.add(somme);
-                System.out.println(freq_list);
+                //System.out.println(freq_list);
                 return freq_list;
         
     } 
 
-    public double calculate_Quartile1(String attribut,ArrayList<Integer> list){
+    public double calculate_Quartile1(String attribut){
         
             ArrayList<Integer> values_effectif = calculate_Effectif(attribut);
             int effectif_total = this.instances.numInstances();
@@ -74,9 +76,9 @@ public class MeasAttribut {
                 if ( effectif_total % 4 != 0){
                     position++;
                 }
-                for (int i=1;i<list.size();i+=2){
-                    if (list.get(i)>= position){
-                        return list.get(i-1);
+                for (int i=1;i<values_effectif.size();i+=2){
+                    if (values_effectif.get(i)>= position){
+                        return values_effectif.get(i-1);
                     }
                 }
 
@@ -84,7 +86,7 @@ public class MeasAttribut {
     }
     
     
-    public double calculate_Quartile3(String attribut,ArrayList<Integer> list){
+    public double calculate_Quartile3(String attribut){
         
                 ArrayList<Integer> values_effectif = calculate_Effectif(attribut);
                 int effectif_total = instances.numInstances();
@@ -93,9 +95,9 @@ public class MeasAttribut {
                 if ( effectif_total % 4 != 0){
                     position++;
                 }
-                for (int i=1;i<list.size();i+=2){
-                    if (list.get(i)>= position){
-                        return list.get(i-1);
+                for (int i=1;i<values_effectif.size();i+=2){
+                    if (values_effectif.get(i)>= position){
+                        return values_effectif.get(i-1);
                     }
 
                 }
@@ -104,9 +106,54 @@ public class MeasAttribut {
     }
 
     
-    public double calculate_Range(String attribut){
+   public void display_mean(TextArea details){
+         details.clear();
+        String detailsContenue = "\ncalcule du mean:\n"
+                + "resting_blood_pressure:\n"
+                + "mean :\t\t" + this.calculate_Mean("resting_blood_pressure") + "\n"
+                + "serum_cholestoral:\n"
+                + "mean :\t\t" + this.calculate_Mean("serum_cholestoral") + "\n"
+                + "maximum_heart_rate_achieved:\n"
+                + "mean :\t\t" + this.calculate_Mean("maximum_heart_rate_achieved") + "\n";
+
+        details.setText(detailsContenue);
+       
+   }
+     public void display_mode(TextArea details){
+      details.clear();
+        String detailsContenue = "\ncalcule du mode:\n"
+                + "resting_blood_pressure:\n"
+                + "\tmode :\t\t" + this.calculate_Mode("resting_blood_pressure") + "\n"
+                + "serum_cholestoral:\n"
+                + "\tmode :\t\t" + this.calculate_Mode("serum_cholestoral") + "\n"
+                + "maximum_heart_rate_achieved:\n"
+                + "\tmode :\t\t" + this.calculate_Mode("maximum_heart_rate_achieved") + "\n";
+
+        details.setText(detailsContenue);
+       
+   }
+          public void display_Q1MedianQ3(TextArea details,String[] attributes){
+              String total="";
+               details.clear();
+              for (String attribute : attributes) {
+                  total+=Q1MedianQ3StringMaker(attribute);
+                  
+              }
+        details.setText(total);
+       
+   }
+    private String Q1MedianQ3StringMaker(String attribute) {
+
         
-        return Q3-Q1;
+
+        String detailsContenue = "\n"
+                + attribute + ":\n"
+                + "Q1 :\t\t" + this.calculate_Quartile1(attribute) + "\n"
+                + "Median :\t\t" + this.calculate_Median(attribute) + "\n"
+                + "Q3 :\t\t" + this.calculate_Quartile3(attribute) + "\n"
+                + "interquartile range :\t\t" + (this.calculate_Quartile3(attribute) - this.calculate_Quartile1(attribute)) + "\n";
+        return detailsContenue;
+
     }
     
     public double calculate_Median(String attribut){
@@ -147,8 +194,8 @@ public class MeasAttribut {
                 listOf_Values.add((int)(current_instance.value(instances.attribute(attribut))));
                 some = some + listOf_Values.get(i);
             }
-            System.out.println("7sabhom "+instances.meanOrMode(7));
-            System.out.println("SOme"+some);
+            //System.out.println("7sabhom "+instances.meanOrMode(7));
+            //System.out.println("SOme"+some);
             return ((double)some)/((double)nb_total_instances);
     }
     
@@ -200,9 +247,7 @@ public class MeasAttribut {
     /**
      * @return the instances
      */
-    public Instances getInstances() {
-        return instances;
-    }
+  
 
     /**
      * @param instances the instances to set
@@ -211,90 +256,9 @@ public class MeasAttribut {
         this.instances = instances;
     }
 
-    /**
-     * @return the Mean
-     */
-    public double getMean() {
-        return Mean;
-    }
 
-    /**
-     * @param Mean the Mean to set
-     */
-    public void setMean(double Mean) {
-        this.Mean = Mean;
-    }
+  
 
-    /**
-     * @return the Mediane
-     */
-    public double getMediane() {
-        return Mediane;
-    }
-
-    /**
-     * @param Mediane the Mediane to set
-     */
-    public void setMediane(double Mediane) {
-        this.Mediane = Mediane;
-    }
-
-    /**
-     * @return the Mode
-     */
-    public double getMode() {
-        return Mode;
-    }
-
-    /**
-     * @param Mode the Mode to set
-     */
-    public void setMode(double Mode) {
-        this.Mode = Mode;
-    }
-
-    /**
-     * @return the Q1
-     */
-    public double getQ1() {
-        return Q1;
-    }
-
-    /**
-     * @param Q1 the Q1 to set
-     */
-    public void setQ1(double Q1) {
-        this.Q1 = Q1;
-    }
-
-    /**
-     * @return the Q3
-     */
-    public double getQ3() {
-        return Q3;
-    }
-
-    /**
-     * @param Q3 the Q3 to set
-     */
-    public void setQ3(double Q3) {
-        this.Q3 = Q3;
-    }
-
-    /**
-     * @return the Range
-     */
-    public double getRange() {
-        return Range;
-    }
-
-    /**
-     * @param Range the Range to set
-     */
-    public void setRange(double Range) {
-        this.Range = Range;
-    }
-    
 
 
 

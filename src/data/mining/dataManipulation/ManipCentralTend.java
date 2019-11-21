@@ -1,5 +1,5 @@
 
-package dataManipulation;
+package data.mining.dataManipulation;
 import java.util.*;
 import weka.core.converters.ConverterUtils.DataSource;
 import weka.core.Instances;

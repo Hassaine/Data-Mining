@@ -1,4 +1,4 @@
-import dataManipulation.*;
+import data.mining.dataManipulation.DataSet;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GradientPaint;

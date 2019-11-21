@@ -1,4 +1,4 @@
-import dataManipulation.DataSet;
+import data.mining.dataManipulation.DataSet;
 import java.awt.Font;
 import java.util.ArrayList;
 import java.util.List;

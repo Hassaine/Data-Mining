@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.SwingNode?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="700.0" prefWidth="1029.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="data.mining.controller.MainScreenController">
+
+
+<VBox prefHeight="700.0" prefWidth="1029.0" style="-fx-background-color: brown;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar pickOnBounds="false">
+        <menus>
+          <Menu mnemonicParsing="false" text="Fichier">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#displayData" text="Ouvrir dataSet" />
+                  <MenuItem mnemonicParsing="false" text="Sauvegarder comme" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Visualisation">
+            <items>
+                  <Menu mnemonicParsing="false" text="Digrammes &amp; Graphes">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#doGraph" text="Graphes de fonction" />
+                        <MenuItem mnemonicParsing="false" onAction="#doHist" text="Histogrammes" />
+                        <MenuItem mnemonicParsing="false" onAction="#doBoxPlot" text="Boxplots (Boites à moustache)" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Statistiques sur les attributs numériques">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#MinMaxDeterminator" text="Mins &amp; Maxs " />
+                        <MenuItem mnemonicParsing="false" onAction="#Q1MedianQ3Determinator" text="Q1, Median &amp; Q3 " />
+                        <MenuItem mnemonicParsing="false" onAction="#meanDeterminator" text="Means" />
+                        <MenuItem mnemonicParsing="false" onAction="#modeDeterminator" text="Modes" />
+                     </items>
+                  </Menu>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <SplitPane dividerPositions="0.5394352482960078" prefHeight="675.0" prefWidth="1025.0" VBox.vgrow="ALWAYS">
+         <items>
+               <SplitPane dividerPositions="0.1263001485884101, 0.1352154531946508" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
+                 <items>
+                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="140.0" prefWidth="558.0">
+                        <children>
+                           <MenuButton layoutX="31.0" layoutY="14.0" mnemonicParsing="false" text="X" visible="false" fx:id="xAxisScutterPlot">
+                             <items>
+                               <MenuItem mnemonicParsing="false" text="Action 1" />
+                               <MenuItem mnemonicParsing="false" text="Action 2" />
+                             </items>
+                           </MenuButton>
+                           <MenuButton fx:id="yAxisScutterPlot" layoutX="32.0" layoutY="51.0" mnemonicParsing="false" text="Y" visible="false">
+                             <items>
+                               <MenuItem mnemonicParsing="false" text="Action 1" />
+                               <MenuItem mnemonicParsing="false" text="Action 2" />
+                             </items>
+                           </MenuButton>
+                           <Button fx:id="plotButton" layoutX="460.0" layoutY="19.0" mnemonicParsing="false" onAction="#buttonBoxPlot" prefHeight="40.0" prefWidth="69.0" text="Plot" visible="false" />
+                        </children>
+                     </AnchorPane>
+                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="558.0" />
+                  <TableView fx:id="table" prefHeight="578.0" prefWidth="558.0" visible="false" />
+                 </items>
+               </SplitPane>
+            <SplitPane dividerPositions="0.44015444015444016, 0.5308880308880309" orientation="VERTICAL" prefHeight="673.0" prefWidth="477.0" style="-fx-background-color: #FFFFEE;">
+               <items>
+                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="456.0" prefWidth="406.0">
+                        <children>
+                           <SplitPane orientation="VERTICAL" prefHeight="495.0" prefWidth="428.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <items>
+                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                    <children>
+                                       <Pane id="BoxPlotPane" fx:id="BoxPlotPane" layoutY="-2.0" prefHeight="226.0" prefWidth="404.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-2.0">
+                                          <children>
+                                             <SwingNode fx:id="BoxPlotSwingNode" />
+                                          </children>
+                                       </Pane>
+                                    </children>
+                                 </AnchorPane>
+                              </items>
+                           </SplitPane>
+                        </children>
+                     </AnchorPane>
+                  <Label contentDisplay="CENTER" text="    INFORMATIONS   SUR LES ATTRIBUTS ET &#10;    STATISTIQUES" textAlignment="CENTER" textFill="#724848" underline="true">
+                     <font>
+                        <Font name="FreeMono Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="details" editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: cyan;" />
+               </items>
+            </SplitPane>
+         </items>
+      </SplitPane>
+   </children>
+</VBox>
+
+</AnchorPane>
