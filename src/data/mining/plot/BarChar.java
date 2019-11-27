@@ -35,7 +35,7 @@ public class BarChar {
 
         JFreeChart barChart = ChartFactory.createBarChart(
                 chartTitle,
-                "valeurs",
+                att.name(),
                 "frequences",
                 createDataset(valeurs),
                 PlotOrientation.VERTICAL,

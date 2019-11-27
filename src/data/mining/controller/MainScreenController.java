@@ -4,6 +4,7 @@ import data.mining.plot.BarChar;
 import data.mining.plot.BoxPlot;
 import data.mining.plot.ScatterPlot;
 import data.mining.dataManipulation.DataSet;
+import data.mining.dataManipulation.LinearRegression;
 import data.mining.dataManipulation.Statistic;
 import java.net.URL;
 import java.util.ArrayList;
@@ -96,8 +97,15 @@ public class MainScreenController implements Initializable {
                 //get each attribute row values 
                 double[] valeursxAtt = dataSet.getValuesByAttributName(xAttName);
                 double[] valeursyAtt = dataSet.getValuesByAttributName(yAttName);
+                
+                
+                LinearRegression model =  new LinearRegression(valeursxAtt, valeursyAtt);
+                
+                this.details.setText(this.details.getText()+'\n'+model.toString());
+                
+                
                 BoxPlotPane.setVisible(true);
-                final ScatterPlot demo = new ScatterPlot("correlation graphe", BoxPlotSwingNode, xAttName, yAttName, valeursxAtt, valeursyAtt);
+                final ScatterPlot demo = new ScatterPlot("correlation graphe", BoxPlotSwingNode, xAttName, yAttName, valeursxAtt, valeursyAtt,model.slope(),model.intercept());
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -152,7 +160,7 @@ public class MainScreenController implements Initializable {
             if (dataSet != null) {
 
                 BoxPlotPane.setVisible(true);
-                final BarChar demo = new BarChar("histograme de frequance", BoxPlotSwingNode, barCharSelectedattribut, dataSet.getValuesByAttribut(barCharSelectedattribut));
+                final BarChar demo = new BarChar("diagramme à baton", BoxPlotSwingNode, barCharSelectedattribut, dataSet.getValuesByAttribut(barCharSelectedattribut));
             }
         } catch (Exception e) {
             e.printStackTrace();

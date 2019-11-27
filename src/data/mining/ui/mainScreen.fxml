@@ -33,7 +33,7 @@
                   <Menu mnemonicParsing="false" text="Digrammes &amp; Graphes">
                     <items>
                         <MenuItem mnemonicParsing="false" onAction="#doGraph" text="Graphes de fonction" />
-                        <MenuItem mnemonicParsing="false" onAction="#doHist" text="Histogrammes" />
+                        <MenuItem mnemonicParsing="false" onAction="#doHist" text="diagramme à baton" />
                         <MenuItem mnemonicParsing="false" onAction="#doBoxPlot" text="Boxplots (Boites à moustache)" />
                     </items>
                   </Menu>
@@ -51,7 +51,7 @@
       </MenuBar>
       <SplitPane dividerPositions="0.5394352482960078" prefHeight="675.0" prefWidth="1025.0" VBox.vgrow="ALWAYS">
          <items>
-               <SplitPane dividerPositions="0.1263001485884101, 0.1352154531946508" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
+               <SplitPane dividerPositions="0.14446227929373998, 0.15409309791332262" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
                  <items>
                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="140.0" prefWidth="558.0">
                         <children>
