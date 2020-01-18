@@ -2,24 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd5b3456-6986-41e8-ba8a-a49e09139be7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/data_mining.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/data_mining1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/data_mining2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/data_mining3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/data_mining4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data mining.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/Datadescreption.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/HEART_StatFinal.arff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/HEART_Stat_FreqPatten.arff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/breast-cancer.arff" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/production/data mining/META-INF/data mining.kotlin_module" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/DataMining.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/FXMLDocument.fxml" afterDir="false" />
@@ -45,23 +27,8 @@
       <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/plot/BoxPlot.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/plot/ScatterPlot.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/ui/mainScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output/output.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/mining/algorithms/AlgorithmManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/mining/algorithms/Apriori.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/mining/algorithms/Attribut.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/mining/algorithms/Cluster.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/mining/algorithms/DataSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/mining/algorithms/Eclat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/mining/algorithms/Extraction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/mining/algorithms/Instance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/mining/algorithms/Kmedoids.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/mining/algorithms/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/mining/algorithms/TransactionDataSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/mining/DataMining.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/mining/DataMining.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/mining/controller/MainScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/mining/controller/MainScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/mining/dataManipulation/DataSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/mining/dataManipulation/DataSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/mining/plot/BarChar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/mining/plot/BarChar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/mining/ui/mainScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/mining/ui/mainScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +43,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="hassaine &lt;hassaine24@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1WZKghWpSYWylq6pOc5yaO4xOLa" />
@@ -154,7 +126,19 @@
       <option name="presentableId" value="Default" />
       <updated>1579351789837</updated>
     </task>
+    <task id="LOCAL-00001" summary="add apriori eclat Kmedoids algorithms">
+      <created>1579370527992</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579370527993</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add apriori eclat Kmedoids algorithms" />
+    <option name="LAST_COMMIT_MESSAGE" value="add apriori eclat Kmedoids algorithms" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="8" key="#Project_Structure" timestamp="1579365125422">
@@ -169,10 +153,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="443" y="238" width="394" height="220" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.689@0.0.1280.689" timestamp="1579352329281" />
-    <state x="280" y="0" key="CommitChangelistDialog2" timestamp="1579370252460">
+    <state x="425" y="0" key="CommitChangelistDialog2" timestamp="1579370524558">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="280" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1579370252460" />
+    <state x="425" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1579370524558" />
     <state x="421" y="91" key="FileChooserDialogImpl" timestamp="1579365122306">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -197,6 +181,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="144" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1579353820273" />
+    <state x="233" y="82" key="Vcs.Push.Dialog.v2" timestamp="1579370547519">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="233" y="82" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1579370547519" />
     <state x="348" y="174" key="com.intellij.ide.util.TipDialog" timestamp="1579351802841">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
