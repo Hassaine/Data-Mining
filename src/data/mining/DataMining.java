@@ -5,23 +5,14 @@
  */
 package data.mining;
 
-//import dataManipulation.DataSet;
-//import dataManipulation.ManipCentralTend;
-//import dataManipulation.ManipData;
-//import dataManipulation.MeasAttribut;
-//import java.util.EnumSet;
-//import java.nio.file.Files;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-//import java.io.File;
-//import weka.core.converters.ConverterUtils.DataSource;
-//import weka.core.Instances;
-//import weka.core.Attribute;
-//import java.util.*;
+
 
 /**
  *
@@ -34,28 +25,18 @@ public class DataMining extends Application {
         try {
             
         Parent root = FXMLLoader.load(getClass().getResource("ui/mainScreen.fxml"));
-        
-       
         Scene scene = new Scene(root);
         stage.setTitle("data mining");
-        
         stage.getIcons().add(new Image("file:data.png"));
-        
-        
         stage.setResizable(false);
-        stage.setScene(scene);        
-        
+        stage.setScene(scene);
         stage.show();
-        
-        
-            
-        } catch (Exception e) {
-            
+        } catch (Exception e) {       
             System.out.println(e.getMessage());
             System.out.println(e.getCause().getMessage());
-        }
-       
+        }     
     }
+    
     /**
      * @param args the command line arguments
      */

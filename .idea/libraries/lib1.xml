@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/run1245169393/lib/weka-stable-3.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/run1245169393/lib/jfreechart-dependency-jcommon-1.0.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/run1245169393/lib/jmathplot.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/run1245169393/lib/weka.jar!/" />
+      <root url="jar://$PROJECT_DIR$/dist/run1245169393/lib/jfreechart-1.0.19.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

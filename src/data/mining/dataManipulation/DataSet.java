@@ -1,6 +1,13 @@
 package data.mining.dataManipulation;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -22,11 +29,16 @@ public class DataSet {
     private int numInstance;
     private int numAttributs;
     private ArrayList<Attribute> attributes;
+    private String path;
 
     //Constructor
     public DataSet(String path) throws Exception {
         DataSource source = new DataSource(path);
+        this.path = path;
+
         this.instances = source.getDataSet();
+
+        System.out.println(source.toString());
         this.numInstance = this.instances.numInstances();
         this.numAttributs = this.instances.numAttributes();
         this.attributes = new ArrayList<>();
@@ -63,34 +75,70 @@ public class DataSet {
         }
     }
 
-    public void display_DataSet(TableView table,TextArea details) {
-      Instances data = this.instances;
-            System.out.println("INFORMATIONS :\n\nData Set " + data.relationName() + "\nNombre d\'instances : " + Integer.toString(data.numInstances()) + "\n\n");
-            String detailsContenue = "INFORMATIONS :\n\nData Set " + data.relationName() + "\nNombre d\'instances : " + Integer.toString(data.numInstances()) + "\n\n";
-            int i = 0;
-            while (i < data.numAttributes()) {
-                detailsContenue += ("L\'attribut " + data.attribute(i).name() + " est de type " + Attribute.typeToString(data.attribute(i))) + "\n";
-                i++;
-            }
-            details.setText(detailsContenue);
-            details.setVisible(true);
-            ArrayList<TableColumn<Instance, String>> atrributes = new ArrayList<>();
-            ArrayList<Instance> instances = new ArrayList<>();
-            for (i = 0; i < data.size(); i++) {
-                instances.add(data.get(i));
-            }
-            ObservableList<Instance> tableContent = FXCollections.observableArrayList(instances);
-            for (i = 0; i < data.numAttributes(); i++) {
-                TableColumn<Instance, String> column = new TableColumn<Instance, String>(data.attribute(i).name());
-                final int attIndex = i;
-                column.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().toString(attIndex)));
-                atrributes.add(column);
-            }
-             table.getColumns().clear();
-            table.getColumns().addAll(atrributes);
-            table.setItems(tableContent);
-            table.setVisible(true);
+    public void display_DataSetInfoCSV(TextArea details, String path) throws FileNotFoundException, IOException {
+        File file = new File(path);
+        BufferedReader br;
+         System.out.println("I am inside display_DataSetInfoCSV");
+        br = new BufferedReader(new FileReader(file));
+        String detailsContenue = "";
+        String line=" ";
+       
+     
+        
+        while ((line = br.readLine()) != null) {
+            detailsContenue+=line+"\n";
+               
+           }
+            
+             
+             
+
+             
+        details.setText(detailsContenue);
+        details.setVisible(true);
+
     }
+
+    public void display_DataSet(TableView table, TextArea details) throws FileNotFoundException, IOException {
+        File file = new File(this.path);
+        BufferedReader br;
+
+        br = new BufferedReader(new FileReader(file));
+        String st;
+        String detailsContenue = "";
+        while ((st = br.readLine()) != null) {
+
+            if (st.startsWith("%")) {
+                detailsContenue += st.substring(1, st.length()) + "\n";
+
+                //System.out.println(st);
+            } else {
+                break;
+            }
+        }
+        details.setText(detailsContenue);
+        details.setVisible(true);
+
+        Instances data = this.instances;
+        int i = 0;
+        ArrayList<TableColumn<Instance, String>> atrributes = new ArrayList<>();
+        ArrayList<Instance> instances = new ArrayList<>();
+        for (i = 0; i < data.size(); i++) {
+            instances.add(data.get(i));
+        }
+        ObservableList<Instance> tableContent = FXCollections.observableArrayList(instances);
+        for (i = 0; i < data.numAttributes(); i++) {
+            TableColumn<Instance, String> column = new TableColumn<Instance, String>(data.attribute(i).name());
+            final int attIndex = i;
+            column.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().toString(attIndex)));
+            atrributes.add(column);
+        }
+        table.getColumns().clear();
+        table.getColumns().addAll(atrributes);
+        table.setItems(tableContent);
+        table.setVisible(true);
+    }
+
     public void display_DataSet() {
         Instance current_instance;
         int Nb_ist = instances.numInstances();
@@ -100,6 +148,7 @@ public class DataSet {
             System.out.println(current_instance);
         }
     }
+
     public void display_Default_DS() {
         System.out.println(instances);
     }
@@ -119,7 +168,7 @@ public class DataSet {
 
     }
 
-    public int getNumInstance() {    
+    public int getNumInstance() {
         return numInstance;
     }
 
@@ -128,32 +177,33 @@ public class DataSet {
     }
 
     public double[] getValuesByAttribut(Attribute attribut) {
-        double [] values = new double[this.numInstance];
-        Instance current_instance;       
-        int Nb_ist = instances.numInstances();      
+        double[] values = new double[this.numInstance];
+        Instance current_instance;
+        int Nb_ist = instances.numInstances();
         for (int i = 0; i < Nb_ist; i++) {
             current_instance = instances.get(i);
-            values[i]=current_instance.value(attribut);                      
+            values[i] = current_instance.value(attribut);
         }
         return values;
     }
+
     public double[] getValuesByAttributName(String attribut) {
-        
-        double [] values = new double[this.numInstance];
-        Instance current_instance;       
-        int Nb_ist = instances.numInstances();     
+
+        double[] values = new double[this.numInstance];
+        Instance current_instance;
+        int Nb_ist = instances.numInstances();
         Attribute attTmp = null;
-        
+
         for (int i = 0; i < this.numAttributs; i++) {
-            if(this.attributes.get(i).name().equals(attribut)){
-                attTmp=this.attributes.get(i);
+            if (this.attributes.get(i).name().equals(attribut)) {
+                attTmp = this.attributes.get(i);
                 break;
             }
-            
+
         }
         for (int i = 0; i < Nb_ist; i++) {
             current_instance = instances.get(i);
-            values[i]=current_instance.value(attTmp);                      
+            values[i] = current_instance.value(attTmp);
         }
         return values;
     }

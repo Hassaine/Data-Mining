@@ -1,0 +1,345 @@
+age:
+(29, 45];AGE1
+(45, 52];AGE2
+(52, 58];AGE3
+(58, 62];AGE4
+(62, 77];AGE5
+
+restingBlood:
+[94, 118];RBD1
+(118, 125];RBD2
+(125, 134];RBD3
+(134, 144];RBD4
+(144, 200];RBD5
+
+cholestoral_label:
+(126, 226];CTR1
+(226, 267];CTR2
+(267, 564];CTR3
+
+maxHeartRate_label:
+(71, 133];MHR1
+(133,153];MHR2
+(153,166];MHR3
+(166,202];MHR4
+
+*******************Eclat Algorithme*******************:
+temps d'execution:0.051s
+frequent itemset :
+
+Age5 RBD4 
+Age2 MHR2 
+Age5 RBD1 
+Age2 MHR3 
+Age5 RBD2 
+Age2 MHR4 
+Age5 RBD5 
+Age1 MHR4 RBD1 
+Age1 CTR2 MHR4 
+MHR1 RBD2 
+MHR1 RBD1 
+Age1 MHR2 
+MHR1 RBD4 
+MHR1 RBD3 
+Age1 MHR4 
+Age4 RBD4 
+Age4 RBD5 
+MHR1 RBD5 
+Age3 RBD1 
+MHR2 RBD3 
+Age3 RBD2 
+MHR2 RBD2 
+MHR2 RBD5 
+MHR2 RBD4 
+Age3 RBD5 
+Age3 RBD3 
+MHR2 RBD1 
+Age3 RBD4 
+CTR3 MHR3 
+CTR3 MHR2 
+CTR3 MHR1 
+CTR3 MHR4 
+MHR3 RBD4 
+Age2 RBD1 
+MHR3 RBD3 
+MHR3 RBD5 
+Age2 RBD4 
+Age2 RBD2 
+MHR3 RBD2 
+Age2 RBD3 
+MHR3 RBD1 
+CTR2 MHR2 
+CTR2 MHR1 
+CTR2 MHR4 
+CTR2 MHR3 
+Age5 CTR2 
+Age5 CTR3 
+Age5 CTR1 
+Age1 CTR1 MHR4 
+MHR4 RBD4 
+Age1 RBD3 
+MHR4 RBD1 
+Age1 RBD1 
+MHR4 RBD3 
+Age1 RBD2 
+MHR4 RBD2 
+CTR1 MHR1 
+CTR1 MHR4 
+CTR1 MHR3 
+CTR1 MHR2 
+Age4 CTR1 
+Age4 CTR2 
+Age4 CTR3 
+Age1 CTR1 RBD1 
+Age2 CTR3 
+CTR3 RBD5 
+Age5 MHR1 
+Age5 MHR2 
+Age5 MHR3 
+CTR3 RBD2 
+CTR3 RBD1 
+CTR3 RBD4 
+CTR3 RBD3 
+Age3 CTR1 
+Age3 CTR2 
+Age3 CTR3 MHR1 
+Age3 CTR3 
+Age4 MHR3 
+Age1 CTR2 
+Age1 CTR3 
+CTR2 RBD5 
+CTR2 RBD4 
+Age4 MHR2 
+CTR2 RBD1 
+CTR2 RBD3 
+CTR2 RBD2 
+Age2 CTR1 
+Age2 CTR2 
+Age3 MHR2 
+Age3 MHR3 
+Age3 MHR4 
+CTR1 RBD4 
+CTR1 RBD3 
+CTR1 RBD5 
+Age3 MHR1 
+CTR1 RBD2 
+CTR1 RBD1 
+Age1 CTR1 
+association Rules :
+
+Age5 => CTR3  , confidence :0.44444445
+RBD4 => CTR3  , confidence :0.3653846
+Age5 => CTR1  , confidence :0.22222222
+Age5 => CTR2  , confidence :0.33333334
+MHR1 => CTR3  , confidence :0.38235295
+MHR1 => CTR1  , confidence :0.3970588
+MHR1 => CTR2  , confidence :0.22058824
+CTR3 => RBD2  , confidence :0.17977528
+CTR3 => RBD3  , confidence :0.20224719
+CTR3 => RBD1  , confidence :0.11235955
+MHR2 => RBD4  , confidence :0.15151516
+MHR2 => RBD3  , confidence :0.25757575
+Age1 MHR4 => CTR2  , confidence :0.34375
+CTR3 => RBD4  , confidence :0.21348314
+MHR2 => RBD5  , confidence :0.22727273
+CTR3 => RBD5  , confidence :0.29213482
+Age3 => CTR3 MHR1  , confidence :0.15384616
+Age1 MHR4 => CTR1  , confidence :0.53125
+MHR2 => RBD2  , confidence :0.15151516
+RBD4 => CTR1  , confidence :0.3653846
+MHR2 => RBD1  , confidence :0.21212122
+RBD4 => CTR2  , confidence :0.26923078
+CTR1 RBD1 => Age1  , confidence :0.46153846
+Age3 CTR3 => MHR1  , confidence :0.4
+RBD5 => CTR2  , confidence :0.2962963
+RBD5 => CTR3  , confidence :0.4814815
+MHR1 => RBD5  , confidence :0.25
+MHR1 => RBD4  , confidence :0.1764706
+Age1 RBD1 => MHR4  , confidence :0.5
+MHR1 => RBD1  , confidence :0.19117647
+MHR1 => RBD3  , confidence :0.16176471
+MHR1 => RBD2  , confidence :0.22058824
+RBD5 => CTR1  , confidence :0.2037037
+Age1 => MHR2  , confidence :0.18181819
+Age1 => MHR4  , confidence :0.58181816
+MHR4 => Age2  , confidence :0.20895523
+MHR4 => Age3  , confidence :0.1641791
+MHR4 => Age1  , confidence :0.47761193
+CTR1 => Age1 RBD1  , confidence :0.13333334
+Age1 MHR4 => RBD1  , confidence :0.3125
+Age1 RBD1 => CTR1  , confidence :0.6
+MHR3 => CTR1  , confidence :0.27941176
+MHR3 => CTR2  , confidence :0.3382353
+CTR1 => RBD1  , confidence :0.2888889
+CTR1 => RBD4  , confidence :0.21111111
+CTR1 => RBD5  , confidence :0.12222222
+MHR3 => CTR3  , confidence :0.38235295
+CTR1 => RBD2  , confidence :0.2
+CTR1 => RBD3  , confidence :0.17777778
+MHR4 => RBD2  , confidence :0.20895523
+MHR4 => RBD1  , confidence :0.2238806
+CTR3 => MHR4  , confidence :0.19101124
+MHR4 => RBD4  , confidence :0.20895523
+CTR3 => MHR3  , confidence :0.29213482
+MHR4 => RBD3  , confidence :0.2238806
+CTR3 => MHR2  , confidence :0.2247191
+CTR3 => MHR1  , confidence :0.29213482
+Age3 MHR1 => CTR3  , confidence :0.45454547
+RBD1 => Age3  , confidence :0.1754386
+RBD1 => Age2  , confidence :0.24561404
+RBD1 => Age1  , confidence :0.3508772
+Age2 => MHR4  , confidence :0.26415095
+Age2 => MHR2  , confidence :0.24528302
+Age2 => MHR3  , confidence :0.33962265
+CTR2 => Age1 MHR4  , confidence :0.12222222
+Age1 => CTR1 RBD1  , confidence :0.21818182
+MHR4 => Age1 RBD1  , confidence :0.14925373
+RBD1 => Age5  , confidence :0.1754386
+Age1 => RBD1  , confidence :0.36363637
+RBD1 => Age1 CTR1  , confidence :0.21052632
+Age1 => RBD2  , confidence :0.2
+Age1 => RBD3  , confidence :0.21818182
+MHR2 => CTR2  , confidence :0.45454547
+MHR2 => CTR3  , confidence :0.3030303
+MHR2 => CTR1  , confidence :0.24242425
+CTR2 => RBD3  , confidence :0.22222222
+CTR2 => RBD4  , confidence :0.15555556
+CTR2 => RBD1  , confidence :0.23333333
+CTR2 => RBD2  , confidence :0.21111111
+MHR3 => RBD3  , confidence :0.16176471
+MHR3 => RBD2  , confidence :0.19117647
+MHR3 => RBD5  , confidence :0.19117647
+CTR2 => RBD5  , confidence :0.17777778
+MHR3 => RBD4  , confidence :0.23529412
+CTR2 => MHR4  , confidence :0.23333333
+CTR2 => MHR3  , confidence :0.25555557
+CTR2 => MHR2  , confidence :0.33333334
+CTR2 => MHR1  , confidence :0.16666667
+CTR1 => Age1 MHR4  , confidence :0.18888889
+CTR3 => Age1  , confidence :0.13483146
+CTR3 => Age2  , confidence :0.14606741
+CTR3 => Age5  , confidence :0.26966292
+MHR3 => RBD1  , confidence :0.22058824
+CTR3 => Age3  , confidence :0.28089887
+CTR3 => Age4  , confidence :0.16853933
+RBD2 => Age2  , confidence :0.2264151
+RBD1 => MHR1  , confidence :0.22807017
+RBD2 => Age1  , confidence :0.20754717
+MHR4 => Age1 CTR2  , confidence :0.1641791
+RBD1 => MHR2  , confidence :0.24561404
+RBD1 => MHR3  , confidence :0.2631579
+Age3 => MHR3  , confidence :0.2923077
+MHR4 => Age1 CTR1  , confidence :0.25373134
+Age3 => MHR4  , confidence :0.16923077
+Age3 => MHR1  , confidence :0.33846155
+MHR4 RBD1 => Age1  , confidence :0.6666667
+Age3 => MHR2  , confidence :0.2
+RBD1 => MHR4  , confidence :0.2631579
+RBD2 => Age5  , confidence :0.18867925
+RBD2 => Age3  , confidence :0.26415095
+Age2 => RBD1  , confidence :0.26415095
+Age2 => RBD2  , confidence :0.2264151
+Age1 => CTR3  , confidence :0.21818182
+Age1 => CTR1  , confidence :0.5090909
+Age1 => CTR2  , confidence :0.27272728
+CTR1 => MHR4  , confidence :0.31111112
+CTR1 => MHR3  , confidence :0.21111111
+CTR1 => MHR2  , confidence :0.17777778
+CTR1 => MHR1  , confidence :0.3
+CTR2 => Age2  , confidence :0.23333333
+Age1 => CTR1 MHR4  , confidence :0.3090909
+CTR2 => Age3  , confidence :0.23333333
+CTR2 => Age1  , confidence :0.16666667
+CTR2 MHR4 => Age1  , confidence :0.52380955
+Age2 => RBD3  , confidence :0.2264151
+Age2 => RBD4  , confidence :0.20754717
+CTR2 => Age4  , confidence :0.16666667
+CTR2 => Age5  , confidence :0.2
+RBD3 => Age1  , confidence :0.22222222
+RBD2 => MHR1  , confidence :0.28301886
+RBD2 => MHR2  , confidence :0.18867925
+Age4 => MHR2  , confidence :0.3809524
+Age4 => MHR3  , confidence :0.33333334
+RBD2 => MHR3  , confidence :0.24528302
+MHR1 => Age5  , confidence :0.3529412
+RBD2 => MHR4  , confidence :0.26415095
+MHR1 => Age3  , confidence :0.32352942
+Age1 => CTR2 MHR4  , confidence :0.2
+Age1 => MHR4 RBD1  , confidence :0.18181819
+RBD3 => Age3  , confidence :0.2962963
+RBD3 => Age2  , confidence :0.22222222
+Age3 => RBD1  , confidence :0.15384616
+Age2 => CTR2  , confidence :0.3962264
+Age2 => CTR3  , confidence :0.24528302
+Age2 => CTR1  , confidence :0.35849056
+MHR4 => CTR1  , confidence :0.41791046
+MHR4 => CTR2  , confidence :0.31343284
+MHR4 => CTR3  , confidence :0.25373134
+Age1 CTR1 => RBD1  , confidence :0.42857143
+CTR1 => Age3  , confidence :0.2
+CTR1 => Age4  , confidence :0.13333334
+CTR1 => Age1  , confidence :0.31111112
+CTR1 => Age2  , confidence :0.21111111
+RBD1 => CTR1  , confidence :0.45614034
+Age3 => RBD2  , confidence :0.21538462
+RBD1 => CTR2  , confidence :0.36842105
+Age3 => RBD3  , confidence :0.24615385
+RBD1 => CTR3  , confidence :0.1754386
+Age3 => RBD4  , confidence :0.16923077
+CTR1 => Age5  , confidence :0.13333334
+Age3 => RBD5  , confidence :0.21538462
+RBD3 => MHR1  , confidence :0.2037037
+Age5 => MHR1  , confidence :0.44444445
+Age5 => MHR2  , confidence :0.25925925
+RBD3 => MHR2  , confidence :0.3148148
+RBD3 => MHR3  , confidence :0.2037037
+RBD3 => MHR4  , confidence :0.2777778
+RBD1 => Age1 MHR4  , confidence :0.1754386
+Age5 => MHR3  , confidence :0.18518518
+RBD4 => Age5  , confidence :0.1923077
+RBD4 => Age4  , confidence :0.21153846
+RBD4 => Age3  , confidence :0.21153846
+CTR1 MHR4 => Age1  , confidence :0.60714287
+RBD4 => Age2  , confidence :0.21153846
+Age3 => CTR3  , confidence :0.3846154
+MHR1 => Age3 CTR3  , confidence :0.14705883
+Age3 => CTR1  , confidence :0.2769231
+Age3 => CTR2  , confidence :0.32307693
+Age4 => RBD5  , confidence :0.33333334
+RBD2 => CTR1  , confidence :0.33962265
+RBD2 => CTR2  , confidence :0.35849056
+RBD2 => CTR3  , confidence :0.3018868
+Age4 => RBD4  , confidence :0.26190478
+RBD4 => MHR1  , confidence :0.23076923
+MHR3 => Age3  , confidence :0.27941176
+RBD4 => MHR2  , confidence :0.1923077
+MHR3 => Age4  , confidence :0.20588236
+RBD4 => MHR3  , confidence :0.30769232
+MHR3 => Age2  , confidence :0.2647059
+RBD4 => MHR4  , confidence :0.26923078
+MHR3 => Age5  , confidence :0.14705883
+Age1 CTR2 => MHR4  , confidence :0.73333335
+RBD5 => Age5  , confidence :0.35185185
+RBD5 => Age4  , confidence :0.25925925
+RBD5 => Age3  , confidence :0.25925925
+Age4 => CTR2  , confidence :0.35714287
+Age4 => CTR3  , confidence :0.35714287
+Age4 => CTR1  , confidence :0.2857143
+CTR3 => Age3 MHR1  , confidence :0.11235955
+Age5 => RBD4  , confidence :0.18518518
+Age5 => RBD5  , confidence :0.35185185
+Age5 => RBD1  , confidence :0.18518518
+RBD3 => CTR1  , confidence :0.2962963
+Age5 => RBD2  , confidence :0.18518518
+RBD3 => CTR2  , confidence :0.37037036
+RBD3 => CTR3  , confidence :0.33333334
+MHR2 => Age1  , confidence :0.15151516
+MHR2 => Age4  , confidence :0.24242425
+RBD5 => MHR1  , confidence :0.3148148
+MHR2 => Age5  , confidence :0.21212122
+MHR2 => Age2  , confidence :0.1969697
+RBD5 => MHR2  , confidence :0.2777778
+RBD5 => MHR3  , confidence :0.24074075
+MHR2 => Age3  , confidence :0.1969697
+Age1 CTR1 => MHR4  , confidence :0.60714287
+CTR3 MHR1 => Age3  , confidence :0.3846154

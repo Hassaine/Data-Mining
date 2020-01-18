@@ -50,14 +50,12 @@ public class BarChar {
     }
 
     private CategoryDataset createDataset(double[] valeurs) {
-
+        
+        valeurs = sortVector(valeurs);
         final DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-
         int[] frequences = new int[valeurs.length];
         double[] val = new double[valeurs.length];
-
-        java.util.Arrays.fill(frequences, 0);
-
+        java.util.Arrays.fill(val, -1);
         int k = 0;
         for (int i = 0; i < valeurs.length - 1; i++) {
             if (valeurs[i] == -1.0) {
@@ -70,14 +68,14 @@ public class BarChar {
                     frequences[k] += 1;
                     valeurs[j] = -1;
                 }
-
             }
             valeurs[i] = -1;
             k++;
 
         }
+
         k = 0;
-        while (frequences[k] != 0) {
+        while (val[k] != -1) {
 
             dataset.addValue(frequences[k], String.valueOf(val[k]), "");
             k++;
@@ -85,6 +83,29 @@ public class BarChar {
         }
 
         return dataset;
+    }
+
+    private double[] sortVector(double[] valeurs) {
+
+        //double max = 0.0;
+        for (int i = 0; i < valeurs.length; i++) {
+            double max = valeurs[0];
+            int indicemax = 0;
+            for (int j = 0; j < valeurs.length - i; j++) {
+                if (valeurs[j] > max) {
+                    indicemax = j;
+                    max = valeurs[j];
+
+                }
+
+            }
+            double tmp = valeurs[valeurs.length - i - 1];
+            valeurs[valeurs.length - i - 1] = max;
+            valeurs[indicemax] = tmp;
+
+        }
+
+        return valeurs;
     }
 
 }

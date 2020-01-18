@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="data mining2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/weka.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jfreechart-dependency-jcommon-1.0.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jfreechart-1.0.19.zip!/" />
+      <root url="jar://$PROJECT_DIR$/jmathplot.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jfreechart-1.0.19.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/jfoenix-8.0.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

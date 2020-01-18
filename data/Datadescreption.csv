@@ -1,0 +1,24 @@
+age:
+(29, 45];AGE1
+(45, 52];AGE2
+(52, 58];AGE3
+(58, 62];AGE4
+(62, 77];AGE5
+
+restingBlood:
+[94, 118];RBD1
+(118, 125];RBD2
+(125, 134];RBD3
+(134, 144];RBD4
+(144, 200];RBD5
+
+cholestoral_label:
+(126, 226];CTR1
+(226, 267];CTR2
+(267, 564];CTR3
+
+maxHeartRate_label:
+(71, 133];MHR1
+(133,153];MHR2
+(153,166];MHR3
+(166,202];MHR4
