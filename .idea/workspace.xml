@@ -2,33 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd5b3456-6986-41e8-ba8a-a49e09139be7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/META-INF/data mining.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/DataMining.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/FXMLDocument.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/FXMLDocumentController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/algorithms/AlgorithmManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/algorithms/Apriori.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/algorithms/Attribut.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/algorithms/Cluster.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/algorithms/DataSet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/algorithms/Eclat.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/algorithms/Extraction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/algorithms/Instance.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/algorithms/Kmedoids.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/algorithms/Transaction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/algorithms/TransactionDataSet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/controller/MainScreenController$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/controller/MainScreenController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/dataManipulation/DataSet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/dataManipulation/LinearRegression.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/dataManipulation/Statistic.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/plot/BarChar.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/plot/BoxPlot$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/plot/BoxPlot.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/plot/ScatterPlot.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/data mining/data/mining/ui/mainScreen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/data.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jfreechart-1.0.19.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jfreechart-1.0.19.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jfreechart-dependency-jcommon-1.0.12.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jmathplot.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/mining/DataMining.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/mining/DataMining.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weka.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +48,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\Documents\NetBeansProjects\data mining\images" />
+      <recent name="C:\Users\HP\Documents\NetBeansProjects\data mining\libs" />
       <recent name="C:\Users\HP\Documents\NetBeansProjects\data mining\src\data\mining" />
     </key>
   </component>
@@ -147,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579374802250</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="delete .idea file from the remote">
+      <created>1579375655471</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1579375655471</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -177,22 +168,22 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="421" y="91" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1579365122306" />
-    <state width="1237" height="166" key="GridCell.Tab.0.bottom" timestamp="1579370201323">
+    <state width="1237" height="166" key="GridCell.Tab.0.bottom" timestamp="1579376263717">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1579370201323" />
-    <state width="1237" height="166" key="GridCell.Tab.0.center" timestamp="1579370201321">
+    <state width="1237" height="166" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1579376263717" />
+    <state width="1237" height="166" key="GridCell.Tab.0.center" timestamp="1579376263716">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1579370201321" />
-    <state width="1237" height="166" key="GridCell.Tab.0.left" timestamp="1579370201321">
+    <state width="1237" height="166" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1579376263716" />
+    <state width="1237" height="166" key="GridCell.Tab.0.left" timestamp="1579376263715">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1579370201321" />
-    <state width="1237" height="166" key="GridCell.Tab.0.right" timestamp="1579370201322">
+    <state width="1237" height="166" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1579376263715" />
+    <state width="1237" height="166" key="GridCell.Tab.0.right" timestamp="1579376263716">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1579370201322" />
+    <state width="1237" height="166" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1579376263716" />
     <state x="144" y="0" key="SettingsEditor" timestamp="1579353820273">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -201,10 +192,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="233" y="82" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1579374838225" />
-    <state x="348" y="174" key="com.intellij.ide.util.TipDialog" timestamp="1579351802841">
+    <state x="348" y="174" key="com.intellij.ide.util.TipDialog" timestamp="1579862546458">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="348" y="174" key="com.intellij.ide.util.TipDialog/0.0.1280.689@0.0.1280.689" timestamp="1579351802841" />
+    <state x="348" y="174" key="com.intellij.ide.util.TipDialog/0.0.1280.689@0.0.1280.689" timestamp="1579862546458" />
     <state x="346" y="0" width="588" height="689" key="find.popup" timestamp="1579370092624">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
